@@ -6,7 +6,8 @@ namespace: vault-warden
 commonAnnotations:
   repo: https://github.com/charlesthomas/homelab-vault-warden
 commonLabels:
-  app: vault-warden
+  app.kubernetes.io/component: vault-warden
+  app.kubernetes.io/name: vault-warden
 
 resources:
 - resources/configmaps.yaml

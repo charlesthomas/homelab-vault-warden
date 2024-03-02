@@ -5,7 +5,9 @@ backups: false
 helm: false
 ingSecret: ''
 ingress: false
-labels: 'app: vault-warden'
+labels: |
+  app.kubernetes.io/component: vault-warden
+  app.kubernetes.io/name: vault-warden
 name: vault-warden
 namespace: vault-warden
 pvc: true

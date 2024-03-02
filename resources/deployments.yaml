@@ -17,7 +17,6 @@ spec:
   template:
     metadata:
       labels:
-        app: vault-warden
         app.kubernetes.io/component: vault-warden
         app.kubernetes.io/name: vault-warden
     spec:
@@ -61,4 +60,3 @@ spec:
             successThreshold: 1
             failureThreshold: 3
       serviceAccountName: vault-warden
-
