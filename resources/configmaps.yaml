@@ -1,0 +1,28 @@
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: vault-warden
+  namespace: vault-warden
+  labels:
+    app: vault-warden
+data:
+  DOMAIN: "https://vault.crt.house"
+  WEBSOCKET_ENABLED: "true"
+  WEBSOCKET_ADDRESS: "0.0.0.0"
+  WEBSOCKET_PORT: "3012"
+  DATA_FOLDER: "/data"
+  ROCKET_ADDRESS: "0.0.0.0"
+  ROCKET_PORT: "8080"
+  ROCKET_WORKERS: "10"
+  SHOW_PASSWORD_HINT: "false"
+  SIGNUPS_ALLOWED: "false"
+  INVITATIONS_ALLOWED: "false"
+  SIGNUPS_VERIFY: "false"
+  WEB_VAULT_ENABLED: "true"
+  LOG_LEVEL: "debug"
+  DB_CONNECTION_RETRIES: "15"
+  DATABASE_MAX_CONNS: "10"
+  INVITATION_ORG_NAME: "Vaultwarden"
+  ICON_BLACKLIST_NON_GLOBAL_IPS: "true"
+  IP_HEADER: "X-Real-IP"
