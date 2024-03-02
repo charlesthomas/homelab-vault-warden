@@ -5,10 +5,10 @@ metadata:
   name: vault-warden
   namespace: vault-warden
 spec:
-    accessModes:
-    - ReadWriteOnce
-    resources:
-      requests:
-        storage: 15Gi
-    storageClassName: nfs-critical
-    volumeMode: Filesystem
+  accessModes:
+  - ReadWriteOnce
+  resources:
+    requests:
+      storage: 15Gi
+  storageClassName: nfs-critical
+  volumeMode: Filesystem
