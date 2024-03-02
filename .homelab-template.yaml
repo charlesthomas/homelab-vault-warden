@@ -1,0 +1,29 @@
+_commit: v1.5.1-1-g750747b
+_src_path: /home/crthomas/code/charlesthomas/homelab-template
+additionalResources: ''
+backups: false
+helm: false
+ingSecret: ''
+ingress: false
+labels: 'app: vault-warden'
+name: vault-warden
+namespace: vault-warden
+pvc: true
+pvcAccessMode: ReadWriteOnce
+pvcName: vault-warden
+pvcSize: 15Gi
+pvcStorageClass: nfs-crticial
+reloader: true
+resources:
+- configmaps.yaml
+- deployments.yaml
+- ingresses.yaml
+- pvcs.yaml
+- rbac.yaml
+- service-accounts.yaml
+- services.yaml
+service: false
+serviceAccount: true
+svcAccountName: vault-warden
+upstreamURL: https://github.com/dani-garcia/vaultwarden
+url: https://github.com/charlesthomas/homelab-vault-warden

@@ -1,0 +1,30 @@
+---
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+namespace: vault-warden
+
+commonAnnotations:
+  repo: https://github.com/charlesthomas/homelab-vault-warden
+commonLabels:
+  app: vault-warden
+
+resources:
+- resources/configmaps.yaml
+- resources/deployments.yaml
+- resources/ingresses.yaml
+- resources/namespaces.yaml
+- resources/pvcs.yaml
+- resources/rbac.yaml
+- resources/service-accounts.yaml
+- resources/services.yaml
+patches:
+- patch: |-
+    apiVersion: apps/v1
+    kind: Deployment
+    metadata:
+      name: all
+      namespace: vault-warden
+      annotations:
+        reloader.stakater.com/auto: "true"
+  target:
+    kind: Deployment
