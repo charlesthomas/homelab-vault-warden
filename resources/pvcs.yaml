@@ -10,5 +10,5 @@ spec:
     resources:
       requests:
         storage: 15Gi
-    storageClassName: nfs-crticial
+    storageClassName: nfs-critical
     volumeMode: Filesystem

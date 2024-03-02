@@ -1,0 +1,22 @@
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: vault-warden
+  namespace: vault-warden
+  labels:
+    app: vault-warden
+spec:
+  type: "ClusterIP"
+  selector:
+    app.kubernetes.io/component: vault-warden
+  ports:
+    - name: "http"
+      port: 80
+      protocol: TCP
+      targetPort: 8080
+    - name: "websocket"
+      port: 3012
+      protocol: TCP
+      targetPort: 3012
+  ipFamilyPolicy: SingleStack
