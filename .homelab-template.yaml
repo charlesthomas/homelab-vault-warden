@@ -1,11 +1,16 @@
-_commit: v1.5.1-1-g750747b
+_commit: v1.6.2-1-gb3e20ee
 _src_path: /home/crthomas/code/charlesthomas/homelab-template
 additionalResources: ''
 backups: false
 helm: false
+homepageDescription: Password Manager
+homepageEnabled: true
+homepageGroup: Tools
+homepageIcon: vaultwarden
+homepageName: Vault Warden
 ingSecret: ''
 ingress: false
-labels: |
+labels: |-
   app.kubernetes.io/component: vault-warden
   app.kubernetes.io/name: vault-warden
 name: vault-warden
