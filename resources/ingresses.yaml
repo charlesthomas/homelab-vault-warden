@@ -34,7 +34,6 @@ spec:
   tls:
     - hosts:
         - "vault.crt.house"
-      secretName: crt.house
   rules:
     - host: "vault.crt.house"
       http:
