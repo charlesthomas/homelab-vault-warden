@@ -29,3 +29,19 @@ patches:
         reloader.stakater.com/auto: "true"
   target:
     kind: Deployment
+- patch: |-
+    apiVersion: networking.k8s.io/v1
+    kind: Ingress
+    metadata:
+      name: vault-warden
+      namespace: vault-warden
+      annotations:
+        gethomepage.dev/href: https://vault-warden.crt.house
+        gethomepage.dev/enabled: "true"
+        gethomepage.dev/description: Password Manager
+        gethomepage.dev/group: Tools
+        gethomepage.dev/icon: vaultwarden
+        gethomepage.dev/name: Vault Warden
+        gethomepage.dev/pod-selector: ""
+  target:
+    kind: Ingress
