@@ -1,4 +1,4 @@
-_commit: v1.6.2-1-gb3e20ee
+_commit: v1.8.2
 _src_path: /home/crthomas/code/charlesthomas/homelab-template
 additionalResources: ''
 backups: false
@@ -8,7 +8,8 @@ homepageEnabled: true
 homepageGroup: Tools
 homepageIcon: vaultwarden
 homepageName: Vault Warden
-ingSecret: ''
+ingHost: vault.crt.house
+ingName: vault-warden
 ingress: false
 labels: |-
   app.kubernetes.io/component: vault-warden
