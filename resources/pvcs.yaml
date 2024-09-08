@@ -4,6 +4,7 @@ kind: PersistentVolumeClaim
 metadata:
   name: vault-warden
   namespace: vault-warden
+  labels:
 spec:
   accessModes:
   - ReadWriteOnce
