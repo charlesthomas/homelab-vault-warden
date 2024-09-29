@@ -38,6 +38,7 @@ spec:
             - containerPort: 3012
               name: websocket
               protocol: TCP
+          resources: {}
           volumeMounts:
             - name: vault-warden-data
               mountPath: /data
