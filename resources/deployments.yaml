@@ -24,6 +24,10 @@ spec:
         - name: vault-warden-data
           persistentVolumeClaim:
             claimName: vault-warden
+        - name: migration
+          nfs:
+            path: /volume1/critical/k3s/vault-warden-vault-warden-pvc-a42c450d-9115-4da0-9207-24d54f1f3f99
+            server: 192.168.1.21
       containers:
         - image: ghcr.io/dani-garcia/vaultwarden:1.32.0-alpine
           imagePullPolicy: IfNotPresent
@@ -42,6 +46,8 @@ spec:
           volumeMounts:
             - name: vault-warden-data
               mountPath: /data
+            - name: migration
+              mountPath: /migration
           livenessProbe:
             httpGet:
               path: /alive

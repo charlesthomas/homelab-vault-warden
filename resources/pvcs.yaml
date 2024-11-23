@@ -6,9 +6,9 @@ metadata:
   namespace: vault-warden
 spec:
   accessModes:
-  - ReadWriteOnce
+    - ReadWriteMany
   resources:
     requests:
       storage: 15Gi
-  storageClassName: nfs-critical
+  storageClassName: longhorn-retain
   volumeMode: Filesystem
