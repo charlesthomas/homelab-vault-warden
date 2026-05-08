@@ -25,7 +25,7 @@ spec:
           persistentVolumeClaim:
             claimName: vault-warden
       containers:
-        - image: vaultwarden/server:1.35.8
+        - image: vaultwarden/server:1.36.0
           imagePullPolicy: IfNotPresent
           name: vault-warden
           envFrom:
