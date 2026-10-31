@@ -5,9 +5,11 @@ namespace: vault-warden
 
 commonAnnotations:
   repo: https://github.com/charlesthomas/homelab-vault-warden
-commonLabels:
-  app.kubernetes.io/component: vault-warden
-  app.kubernetes.io/name: vault-warden
+labels:
+- includeSelectors: true
+  pairs:
+    app.kubernetes.io/component: vault-warden
+    app.kubernetes.io/name: vault-warden
 
 resources:
 - resources/configmaps.yaml
@@ -45,3 +47,11 @@ patches:
         gethomepage.dev/pod-selector: ""
   target:
     kind: Ingress
+configMapGenerator:
+- name: grafana-dashboard-vault-warden
+  files:
+  - grafana/vault-warden.json
+  options:
+    disableNameSuffixHash: true
+    labels:
+      grafana_dashboard: "1"
